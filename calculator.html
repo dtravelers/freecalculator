@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>free calculator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+        
+        <style>
+            *{
+                font-family: 'Lato', sans-serif;
+            }
+            .all{
+                background-image:url(imge/calcu.jpg);
+                background-size: cover;
+                opacity:0.7 ;
+            }
+    .container{
+        display:flex;
+       
+    }
+    .left{
+        width:40%;
+        height: 600px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+        opacity: 0.9;
+      
+        
+    }
+    .gap{
+        padding-top: 0.8cm;
+        padding-left: 0.4cm;
+    }
+    .marg{
+        
+        border-spacing:0.5cm;
+        height: 85px;
+        width:13cm;
+        border-radius: 40px;
+        font-size: larger;
+
+    }
+    .mod{
+        padding-left: 1cm;
+        padding-top: 0.8cm;
+        border-spacing:0.5cm;
+       
+    }
+    .btn button{
+        width: 90px;
+       height: 60px;
+        border-radius: 20px;
+        background-color: rgb(14, 99, 99);
+        color: rgb(253, 255, 255);   
+        font-size: larger;
+        cursor: pointer;
+    }
+    .btn button:hover{
+        color: rgb(13, 13, 14);
+    }
+    .rst{
+        padding-left: 0.5cm;
+        padding-top: 0.5cm;
+        border-spacing:0.5cm;
+        color:whitesmoke;
+        font-size: larger;
+    }
+    .ac button{
+        width: 130px;
+        height: 60px;
+        border-radius: 20px;
+        background-color: rgb(175, 214, 214);
+        font-size: larger;
+    }
+    .ac button:hover{
+        color: rgb(13, 13, 14);
+    }
+    .right{
+        width:60%;
+        height: 200px;
+        border-radius: 20px;
+        padding-left:1cm;
+        padding-top: 0.1cm;
+        border-spacing:0.5cm;
+        color:rgb(0, 0, 0);
+        font-weight: 600;    
+    }
+        </style>
+    </head>
+    <body>
+        <div class="all">
+        <center>  <h1>SIMPLE CALCULATOR<hr> </h1></center> 
+        <div class="container">
+          <div class="left">
+                <TABLE class="gap">
+                    <TR>
+                        <TD ><INPUT class="marg" TYPE="TEXT" id="result"></INPUT></TD>
+                    </TR>
+              </TABLE>
+                 <table class="mod">
+                      <tr class="btn">
+                        <td><button value="+" onclick="">+</button></td>
+                        <td><button value="-" onclick="">-</button></td>
+                        <td><button value="*" onclick="">*</button></td>
+                        <td><button value="/" onclick="">/</button></td> 
+                     </tr>
+                     <tr class="btn">
+                        <td><button value="1" onclick="">1</button></td>
+                        <td><button value="2" onclick="">2</button></td>
+                        <td><button value="3" onclick="">3</button></td>
+                        <td><button value="4" onclick="">4</button></td>
+                     </tr>
+                     <tr class="btn">
+                        <td><button value="5" onclick="">5</button></td>
+                        <td><button value="6" onclick="">6</button></td>
+                        <td><button value="7" onclick="">7</button></td>
+                        <td><button value="8" onclick="">8</button></td>
+                      </tr>
+                     <tr class="btn">
+                        <td><button value="9" onclick="">9</button></td>
+                        <td><button value="0" onclick="">0</button></td>
+                        <td><button value="." onclick="">.</button></td>
+                        <td><button value="=" onclick="">=</button></td>
+                     </tr>
+                     </div>
+                    </table>
+                 <TABLE CLASS="rst">
+                    <TR>
+                        <TD> RESULT:</TD>
+                       <td> <INPUT TYPE="text"></INPUT></td>
+                        <td class="ac"><button value="AC" onclick="clrs()">AC</button></td>
+                    </TR> 
+                 </TABLE>
+           
+        </div>
+        <div class="right">
+            <p>A calculator is a machine which allows people to do math operations more easily. For example, most calculators will add, subtract, multiply, and divide. Some also do square roots, and more complex calculators can help with calculus and draw function graphs. Calculators are found everywhere. A smartphone or other computer can also act as a calculator.</p>
+                <p> calculators, like the abacus, will work without electricity. Others, like the electronic calculator, use batteries. Some calculators are simple, and can only add, subtract, multiply and divide, and sometimes take square roots. Scientific calculators can do many other things, such as use exponents (or powers or indices) and trigonometry functions.</p>
+   <p>   An electronic calculator is typically a portable electronic device used to perform calculations, ranging from basic arithmetic to complex mathematics.
+
+                The first solid-state electronic calculator was created in the early 1960s. Pocket-sized devices became available in the 1970s, especially after the Intel 4004, the first microprocessor, was developed by Intel for the Japanese calculator company Busicom.
+                
+                Modern electronic calculators vary from cheap, give-away, credit-card-sized models to sturdy desktop models with built-in printers. They became popular in the mid-1970s as the incorporation of integrated circuits reduced their size and cost. By the end of that decade, prices had dropped to the point where a basic calculator was affordable to most and they became common in schools.<br>
+                
+                Computer operating systems as far back as early Unix have included interactive calculator programs such as dc and hoc, and interactive BASIC could be used to do calculations on most 1970s and 1980s home computers. Calculator functions are included in most personal digital assistant (PDA) type devices.<br></p>
+                
+          <p> In addition to general purpose calculators, there are those designed for specific markets. For example, there are scientific calculators which include trigonometric and statistical calculations. Some calculators even have the ability to do computer algebra. Graphing calculators can be used to graph functions defined on the real line, or higher-dimensional Euclidean space. As of 2016, basic calculators cost little, but scientific and graphing models tend to cost more.</p>
+                
+            <p>    With the very wide availability of smartphones, tablet computers and personal computers, dedicated hardware calculators, while still widely used, are less common than they once were. In 1986, calculators still represented an estimated 41% of the world's general-purpose hardware capacity to compute information.</p>
+                
+                
+        </div>
+      </div>
+      <script>
+        getelementbyclass(marg)
+        getelementbyclass(btn)
+         getelementbyclass(btn) (prompt(marg()));
+      </script>
+    </body>
+</html>
