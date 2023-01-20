@@ -87,52 +87,91 @@
     }
         </style>
     </head>
-    <body>
+<body>
         <div class="all">
         <center>  <h1>SIMPLE CALCULATOR<hr> </h1></center> 
         <div class="container">
           <div class="left">
-                <TABLE class="gap">
+                <TABLE class="gap" id="calcu">
                     <TR>
                         <TD ><INPUT class="marg" TYPE="TEXT" id="result"></INPUT></TD>
                     </TR>
+                
               </TABLE>
-                 <table class="mod">
+                 <table class="mod" id="calcu">
                       <tr class="btn">
-                        <td><button value="+" onclick="">+</button></td>
-                        <td><button value="-" onclick="">-</button></td>
-                        <td><button value="*" onclick="">*</button></td>
-                        <td><button value="/" onclick="">/</button></td> 
+                        <td><button value="1" onclick="dis('1')" onkeydown="myFunction(event)">1</button></td>
+                        <td><button value="2" onclick="dis('2')" onkeydown="myFunction(event)">2</button></td>
+                        <td><button value="3" onclick="dis('3')" onkeydown="myFunction(event)">3</button></td>
+                        <td><button value="+" onclick="dis('+')" onkeydown="myFunction(event)">+</button></td> 
                      </tr>
                      <tr class="btn">
-                        <td><button value="1" onclick="">1</button></td>
-                        <td><button value="2" onclick="">2</button></td>
-                        <td><button value="3" onclick="">3</button></td>
-                        <td><button value="4" onclick="">4</button></td>
+                        <td><button value="4" onclick="dis('4')" onkeydown="myFunction(event)">4</button></td>
+                        <td><button value="5" onclick="dis('5')" onkeydown="myFunction(event)">5</button></td>
+                        <td><button value="6" onclick="dis('6')" onkeydown="myFunction(event)">6</button></td>
+                        <td><button value="-" onclick="dis('-')" onkeydown="myFunction(event)">-</button></td>
                      </tr>
                      <tr class="btn">
-                        <td><button value="5" onclick="">5</button></td>
-                        <td><button value="6" onclick="">6</button></td>
-                        <td><button value="7" onclick="">7</button></td>
-                        <td><button value="8" onclick="">8</button></td>
+                        <td><button value="7" onclick="dis('7')" onkeydown="myFunction(event)">7</button></td>
+                        <td><button value="8" onclick="dis('8')" onkeydown="myFunction(event)">8</button></td>
+                        <td><button value="9" onclick="dis('9')" onkeydown="myFunction(event)">9</button></td>
+                        <td><button value="*" onclick="dis('*')" onkeydown="myFunction(event)">*</button></td>
                       </tr>
                      <tr class="btn">
-                        <td><button value="9" onclick="">9</button></td>
-                        <td><button value="0" onclick="">0</button></td>
-                        <td><button value="." onclick="">.</button></td>
-                        <td><button value="=" onclick="">=</button></td>
+                        <td><button value="0" onclick="dis('0')" onkeydown="myFunction(event)">0</button></td>
+                        <td><button value="." onclick="dis('.')" onkeydown="myFunction(event)">.</button></td>
+                        <td><button value="/" onclick="dis('/')" onkeydown="myFunction(event)">/</button></td>
+                        <td><button value="=" onclick="dis('=')" onkeydown="myFunction(event)">=</button></td>
                      </tr>
                      </div>
                     </table>
                  <TABLE CLASS="rst">
                     <TR>
-                        <TD> RESULT:</TD>
-                       <td> <INPUT TYPE="text"></INPUT></td>
+                       
                         <td class="ac"><button value="AC" onclick="clrs()">AC</button></td>
                     </TR> 
                  </TABLE>
            
         </div>
+        <script>
+        // Function that display value
+        function dis(val) {
+            document.getElementById("result").value+=val
+        }
+  
+        function myFunction(event) {
+            if (event.key == '0' || event.key == '1' 
+                || event.key == '2' || event.key == '3'
+                || event.key == '4' || event.key == '5' 
+                || event.key == '6' || event.key == '7'
+                || event.key == '8' || event.key == '9' 
+                || event.key == '+' || event.key == '-'
+                || event.key == '*' || event.key == '/')
+                document.getElementById("result").value += event.key;
+        }
+  
+        var cal = document.getElementById("calcu");
+        cal.onkeyup = function(event) {
+            if (event.keyCode === 13) {
+                console.log("Enter");
+                let x = document.getElementById("result").value
+                console.log(x);
+                solve();
+            }
+        }
+  
+        // Function that evaluates the digit and return result
+        function solve() {
+            let x = document.getElementById("result").value
+            let y = math.evaluate(x)
+            document.getElementById("result").value = y
+        }
+          
+        // Function that clear the display
+        function clrs() {
+            document.getElementById("result").value = ""
+        }
+      </script>
         <div class="right">
             <p>A calculator is a machine which allows people to do math operations more easily. For example, most calculators will add, subtract, multiply, and divide. Some also do square roots, and more complex calculators can help with calculus and draw function graphs. Calculators are found everywhere. A smartphone or other computer can also act as a calculator.</p>
                 <p> calculators, like the abacus, will work without electricity. Others, like the electronic calculator, use batteries. Some calculators are simple, and can only add, subtract, multiply and divide, and sometimes take square roots. Scientific calculators can do many other things, such as use exponents (or powers or indices) and trigonometry functions.</p>
